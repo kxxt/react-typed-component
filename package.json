@@ -1,6 +1,6 @@
 {
-  "name": "react-typed",
-  "version": "1.2.0",
+  "name": "react-typed-js",
+  "version": "1.0.0",
   "description": "A react wrapper for typed.js",
   "main": "dist/react-typed.js",
   "types": "./react-typed.d.ts",
@@ -12,11 +12,11 @@
     "prettier": "prettier --write \"**/*.{js,jsx}\"",
     "lint": "eslint --ext .js,.jsx src"
   },
-  "author": "Mike Antoniadis <ssbeefeater@gmail.com> (http://ssbeefeater.github.io/)",
+  "author": "kxxt <levi_zim@outlook.com>",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/ssbeefeater/react-typed.git"
+    "url": "https://github.com/kxxt/react-typed-js.git"
   },
   "tags": [
     "react",
