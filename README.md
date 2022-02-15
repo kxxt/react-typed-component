@@ -6,7 +6,7 @@
 
 [Installation](#installation)
 
-[Examples](http://ssbeefeater.github.io/react-typed)
+[Examples](http://kxxt.github.io/react-typed-js)
 
 [Documentation](#documentation)
 
@@ -17,9 +17,9 @@
 Install with [yarn](https://yarnpkg.com) or [npm](https://www.npmjs.com/)
 
 ```sh
-yarn add react-typed
+yarn add react-typed-js
         #or
-npm install react-typed --save
+npm i react-typed-js
 ```
 
 ---
@@ -29,7 +29,7 @@ npm install react-typed --save
 ```javascript
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Typed from "react-typed";
+import Typed from "react-typed-js";
 
 class MyComponent extends Component {
   render() {
@@ -64,7 +64,7 @@ render(<MyComponent />, document.getElementById("app"));
 ```javascript
 import React, { Component } from "react";
 import { render } from "react-dom";
-import Typed from "react-typed";
+import Typed from "react-typed-js";
 
 class MyComponent extends Component {
   render() {
@@ -90,11 +90,11 @@ class MyComponent extends Component {
 render(<MyComponent />, document.getElementById("app"));
 ```
 
-for blinking cursor `import 'react-typed/dist/animatedCursor.css';`
+for blinking cursor `import 'react-typed-js/dist/animatedCursor.css';`
 
 #### Documentation
 
-React-typed supports all official options that you can find [here](http://www.mattboldt.com/typed.js/docs/).
+React-typed-js supports all official options that you can find [here](http://www.mattboldt.com/typed.js/docs/).
 But also supports some extra props:
 
 | propType          | required | default | description                                      |
