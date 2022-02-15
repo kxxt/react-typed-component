@@ -26,15 +26,6 @@ module.exports = {
     "react", // if installed eslint-plugin-react
   ],
   rules: {
-    // rule overrides go here http://eslint.org/docs/user-guide/configuring#configuring-rules
-    indent: [
-      2,
-      4,
-      {
-        SwitchCase: 1,
-        VariableDeclarator: 1,
-      },
-    ],
     "class-methods-use-this": 0,
     "react/display-name": 0,
     "max-len": [
