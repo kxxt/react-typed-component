@@ -3,6 +3,7 @@ const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
+  mode: "production",
   entry: {
     "react-typed": "./src/index.js",
   },
@@ -19,11 +20,6 @@ module.exports = {
       commonjs: "react-dom",
       amd: "react-dom",
     },
-    "styled-components": {
-      commonjs: "styled-components",
-      commonjs2: "styled-components",
-      amd: "styled-components",
-    },
   },
 
   output: {
@@ -36,24 +32,21 @@ module.exports = {
     globalObject: "this",
   },
 
-  plugins: [
-    new webpack.DefinePlugin({
-      "process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV),
-    }),
-    new CopyPlugin(["./src/animatedCursor.css"]),
-  ],
+  plugins: [new CopyPlugin({ patterns: ["./src/animatedCursor.css"] })],
 
   module: {
     rules: [
       {
         test: /\.js?$/,
         exclude: /node_modules/,
+        type: "javascript/auto",
         use: {
           loader: "babel-loader",
         },
       },
       {
         test: /\.css$/,
+        type: "css/auto",
         use: ["style-loader", "css-loader"],
       },
     ],
