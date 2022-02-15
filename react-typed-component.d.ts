@@ -1,6 +1,6 @@
 /// <reference types="react" />
 
-declare module "react-typed" {
+declare module "react-typed-component" {
   export interface ReactTypedProps {
     typedRef?: Function;
     /** initialize in stopped state */

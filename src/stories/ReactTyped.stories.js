@@ -16,9 +16,9 @@ const description = `
 let typedInstance; // only for demo
 const defaults = {
   strings: [
-    "welcome to react-typed-js",
+    "welcome to react-typed-component",
     'This is a react component that wraps up the <a href="https://github.com/mattboldt/typed.js/">typed.js</a>',
-    'If you like the project add a star in <a href="https://github.com/mattboldt/typed.js/">typed.js</a> and <a href="https://github.com/kxxt/react-typed-js">react-typed-js</a>',
+    'If you like the project add a star in <a href="https://github.com/mattboldt/typed.js/">typed.js</a> and <a href="https://github.com/kxxt/react-typed-component">react-typed-component</a>',
   ],
   typeSpeed: 50,
   backSpeed: 20,

@@ -5,7 +5,7 @@ const CopyPlugin = require("copy-webpack-plugin");
 module.exports = {
   mode: "production",
   entry: {
-    "react-typed": "./src/index.js",
+    "react-typed-component": "./src/index.js",
   },
   externals: {
     react: {
@@ -28,7 +28,7 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     publicPath: "/",
     libraryTarget: "umd",
-    library: "react-typed",
+    library: "react-typed-component",
     globalObject: "this",
   },
 
