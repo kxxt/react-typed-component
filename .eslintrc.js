@@ -1,5 +1,5 @@
 module.exports = {
-    parser: 'babel-eslint',
+    parser: '@babel/eslint-parser',
     env: {
         browser: true,
         es6: true,
@@ -13,7 +13,7 @@ module.exports = {
             experimentalObjectRestSpread: true,
             // if using react or spread operators
             jsx: true, // if using react or plain jsx
-
+            modules: true,
         },
         sourceType: 'module', // can be module or script
 
