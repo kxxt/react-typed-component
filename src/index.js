@@ -14,7 +14,6 @@ class ReactTyped extends Component {
             ...typedOptions
         } = this.props;
 
-
         this.constructTyped(typedOptions);
 
         if (stopped) {
