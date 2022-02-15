@@ -1,18 +1,19 @@
 # react-typed-component
 
-### A react wrapper for [typed.js](https://github.com/mattboldt/typed.js)
+[![GitHub issues](https://img.shields.io/github/issues/kxxt/react-typed-component)](https://github.com/kxxt/react-typed-component/issues)
+[![GitHub forks](https://img.shields.io/github/forks/kxxt/react-typed-component)](https://github.com/kxxt/react-typed-component/network)
+[![GitHub stars](https://img.shields.io/github/stars/kxxt/react-typed-component)](https://github.com/kxxt/react-typed-component/stargazers)
+[![GitHub license](https://img.shields.io/github/license/kxxt/react-typed-component)](https://github.com/kxxt/react-typed-component/blob/master/LICENSE)
 
----
+A react wrapper for [typed.js](https://github.com/mattboldt/typed.js)
 
-[Installation](#installation)
+This is a maintained fork of [react-typed](https://github.com/ssbeefeater/react-typed). 
 
-[Examples](http://kxxt.github.io/react-typed-component)
+I'm quite new to maintain a npm package. If there are bugs, please open an issue in this repo.
 
-[Documentation](#documentation)
+Live demo (Storybook): https://kxxt.github.io/react-typed-component
 
----
-
-#### Installation
+## Installation
 
 Install with [yarn](https://yarnpkg.com) or [npm](https://www.npmjs.com/)
 
@@ -22,77 +23,61 @@ yarn add react-typed-component
 npm i react-typed-component
 ```
 
----
+## Examples
 
-#### Examples
+### A basic example
 
-```javascript
-import React, { Component } from "react";
-import { render } from "react-dom";
-import Typed from "react-typed-component";
+```jsx
+import ReactTyped from "react-typed-component";
 
-class MyComponent extends Component {
-  render() {
-    return (
-      <div>
-        <Typed strings={["Here you can find anything"]} typeSpeed={40} />
-        <br />
+const MyComponent = () => (
+  <div>
+    <ReactTyped strings={["Here you can find anything"]} typeSpeed={40} />
+    <br />
 
-        <Typed
-          strings={[
-            "Search for products",
-            "Search for categories",
-            "Search for brands",
-          ]}
-          typeSpeed={40}
-          backSpeed={50}
-          attr="placeholder"
-          loop
-        >
-          <input type="text" />
-        </Typed>
-      </div>
-    );
-  }
-}
-
-render(<MyComponent />, document.getElementById("app"));
+    <ReactTyped
+      strings={[
+          "Search for products",
+          "Search for categories",
+          "Search for brands",
+      ]}
+      typeSpeed={40}
+      backSpeed={50}
+      attr="placeholder"
+      loop
+      >
+        <input type="text" />
+      </ReactTyped>
+  </div>
+);
 ```
 
-###### Using typed start, stop, toggle, destroy, reset functions
+### Using typed start, stop, toggle, destroy, reset functions
 
-```javascript
-import React, { Component } from "react";
-import { render } from "react-dom";
-import Typed from "react-typed-component";
+```jsx
+import ReactTyped from "react-typed-component";
 
-class MyComponent extends Component {
-  render() {
-    return (
-      <div>
-        <Button onClick={this.typed.start()}>Start</Button>
-        <Button onClick={this.typed.stop()}>Stop</Button>
-        <Button onClick={this.typed.toggle()}>Toggle</Button>
-        <Button onClick={this.typed.destroy()}>Destroy</Button>
-        <Button onClick={this.typed.reset()}>Reset</Button>
-        <Typed
-          typedRef={(typed) => {
-            this.typed = typed;
-          }}
-          strings={["Here you can find anything"]}
-          typeSpeed={40}
-        />
-      </div>
-    );
-  }
-}
-
-render(<MyComponent />, document.getElementById("app"));
+const MyComponent = () => (
+  <div>
+    <Button onClick={this.typed.start()}>Start</Button>
+    <Button onClick={this.typed.stop()}>Stop</Button>
+    <Button onClick={this.typed.toggle()}>Toggle</Button>
+    <Button onClick={this.typed.destroy()}>Destroy</Button>
+    <Button onClick={this.typed.reset()}>Reset</Button>
+    <ReactTyped
+      typedRef={(typed) => {
+        this.typed = typed;
+      }}
+      strings={["Here you can find anything"]}
+      typeSpeed={40}
+    />
+  </div>
+);
 ```
 
 for blinking cursor `import 'react-typed-component/dist/animatedCursor.css';`
 
-#### Documentation
+## Documentation
 
 `react-typed-component` supports all official options that you can find [here](http://www.mattboldt.com/typed.js/docs/).
 But also supports some extra props:
@@ -104,3 +89,9 @@ But also supports some extra props:
 | children(object)  | no       | -       | the element to wrap                              |
 | typedRef(func)    | no       | -       | typedRef(self: Typed) returns the Typed instance |
 | stopped(bool)     | no       | -       | initialize in stopped state                      |
+
+## Credits
+
+Thanks to @ssbeefeater for creating the original [react-typed](https://github.com/ssbeefeater/react-typed).
+
+Thanks to all contributers of [typed.js](https://github.com/mattboldt/typed.js).
