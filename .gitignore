@@ -1,3 +1,7 @@
+# Built docs
+
+storybook-static/
+
 # Logs
 logs
 *.log
