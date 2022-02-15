@@ -8,7 +8,9 @@
     "build": "webpack",
     "test": "jest --coverage",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "prettier": "prettier --write \"**/*.{js,jsx}\"",
+    "lint": "eslint --ext .js,.jsx src"
   },
   "author": "Mike Antoniadis <ssbeefeater@gmail.com> (http://ssbeefeater.github.io/)",
   "license": "MIT",
