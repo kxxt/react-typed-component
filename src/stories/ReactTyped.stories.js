@@ -55,6 +55,7 @@ const Controls = () => (
   </div>
 );
 
+// eslint-disable-next-line react/prop-types
 const Template = ({ children, ...args }) => (
   <div>
     <ReactTyped {...args}>{children}</ReactTyped>
