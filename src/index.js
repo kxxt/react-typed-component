@@ -1,3 +1,3 @@
-import ReactTyped from './ReactTyped';
+import ReactTyped from "./ReactTyped";
 
 export default ReactTyped;

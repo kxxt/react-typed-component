@@ -111,7 +111,7 @@ export const Stopped = (args) => (
       }}
       {...args}
     />
-    <Controls/>
+    <Controls />
   </div>
 );
 
