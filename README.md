@@ -57,22 +57,24 @@ const MyComponent = () => (
 ```jsx
 import ReactTyped from "react-typed-component";
 
-const MyComponent = () => (
-  <div>
-    <Button onClick={this.typed.start()}>Start</Button>
-    <Button onClick={this.typed.stop()}>Stop</Button>
-    <Button onClick={this.typed.toggle()}>Toggle</Button>
-    <Button onClick={this.typed.destroy()}>Destroy</Button>
-    <Button onClick={this.typed.reset()}>Reset</Button>
+const MyComponent = () => {
+  const typed = useRef(null);
+  return (<div>
+    <button onClick={() => typed.current.start()}>Start</button>
+    <button onClick={() => typed.current.stop()}>Stop</button>
+    <button onClick={() => typed.current.toggle()}>Toggle</button>
+    <button onClick={() => typed.current.destroy()}>Destroy</button>
+    <button onClick={() => typed.current.reset()}>Reset</button>
+    <br/>
     <ReactTyped
-      typedRef={(typed) => {
-        this.typed = typed;
-      }}
-      strings={["Here you can find anything"]}
-      typeSpeed={40}
+        typedRef={typedI => {
+          typed.current = typedI;
+        }}
+        strings={["Here you can find hardware", "Here you can find software", "Here you can find net tools",]}
+        typeSpeed={40}
     />
-  </div>
-);
+  </div>);
+}
 ```
 
 for blinking cursor `import 'react-typed-component/dist/animatedCursor.css';`
